@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Get the PID of the current script
-script_pid=$$
 
 # Get the list of all processes
 proc_list=$(</proc/self/stat)
