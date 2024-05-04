@@ -1,3 +1,14 @@
-#!/usr/bin/env bash
-# Displays the PID and the process name of bash processes and scripts running through bash
-pgrep -a bash | awk '/bash$/ {print $1, $2} /bash .*\// {print $1, $2}'
+#!/bin/bash
+
+# Get the PID of the current script
+script_pid=$$
+
+# Get the list of all processes
+proc_list=$(</proc/self/stat)
+
+# Extract the process name and PID for processes containing "bash"
+while read -r pid comm; do
+    if [[ "$comm" == *"bash"* ]]; then
+        echo "$pid bash"
+    fi
+done <<< "$proc_list"
