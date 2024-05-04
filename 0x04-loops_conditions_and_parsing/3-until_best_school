@@ -2,8 +2,8 @@
 # This script displays "Best School" 10 times using an until loop
 
 count=0
-until [ $count -ge 10 ]
+until [ $count -eq 9 ]
 do
-    echo "Best School"
-    ((count++))
+echo Best School
+((count++))
 done
