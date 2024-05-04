@@ -1,8 +1,1 @@
-#!/usr/bin/env bash
-# This script generates a SSH RSA key pair
-
-# Generate RSA key pair
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
-# Output public key
-cat ~/.ssh/id_rsa.pub > 0-RSA_public_key.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRuMGbWFh7EWjB/DY5jHX9QQoiy38txnTQxYJ0k1c+GPolRqwplbjoz2LSpKo+O75cOBxWALd9PC0eOrTXloDZf4aQJ5r3SA00UKHjXC37ZEBnjwSwcewLYa3EDr+anEIvICcbo7GaJ7ZBsdyf7BHz1wQtexoG4deRBUalwEmlaLnRDkS5j395FcLusDCr2FQghjipzXN+e7u0HPbbxNQrkfsq3UDIeCnJl8PLlcZNy2+VadIC0wPAnoUYeHS9YCcbmNIO2zHubUCvdICZm2KgGYAqZM+eFSYQQeQCbKn77gdAkXDH2ieTGIf4tptiGkv7g1Ie1/rZNMMB0ETpEOhy7T2Hh+eek8MVMJcg/vYQrDYAXQciFI0wZNplxNq1O5kfMdmRmCgHq3vagCw4RXVxL2sJ5SSSt+rSBnTxnhoEH5F2GJ/Ju0JGXVSCfNG95gF7bwPH1VjeR30uONOeFHMMGPBq6kAGQG5uerIjMDHYZg9ztMnGEY8NaKf6nAf7jg0= mahmoud@mahmoud-levo
