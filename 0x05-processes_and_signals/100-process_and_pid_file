@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Script that hates to be rejected
+
+echo $$ > /var/run/myscript.pid
+
+sigterm(){
+	echo I hate the kill command
+}
+
+sigint(){
+	echo Y U no love me?!
+}
+
+sigquit(){
+	rm /var/run/myscript.pid
+	exit
+}
+
+trap SIGTERM sigterm
+trap SIGINT sigint
+trap SIGQUIT sigquit
+
+while true
+do
+	echo To infinity and beyond
+	sleep 2
+done
