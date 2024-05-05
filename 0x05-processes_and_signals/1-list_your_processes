@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This script to show a list of currently running processes
-ps -axu -A
+ps axo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --sort=-%cpu | head -n 50
+
