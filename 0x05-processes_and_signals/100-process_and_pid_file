@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 # Script that hates to be rejected
 
-echo $$ > /var/run/myscript.pid
+sudo touch /var/run/myscript.pid
+sudo sh -c 'echo $$ > /var/run/myscript.pid'
 
 sigterm(){
 	echo I hate the kill command
+	sudo rm /var/run/myscript.pid
+	exit
 }
 
 sigint(){
@@ -12,13 +15,13 @@ sigint(){
 }
 
 sigquit(){
-	rm /var/run/myscript.pid
+	sudo rm /var/run/myscript.pid
 	exit
 }
 
-trap SIGTERM sigterm
-trap SIGINT sigint
-trap SIGQUIT sigquit
+trap sigterm SIGTERM
+trap sigint SIGINT
+trap sigquit SIGQUIT
 
 while true
 do
