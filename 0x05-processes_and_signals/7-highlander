@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
-# Outputs "To infinity and beyond" indefinitely and responds to SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
-while true; do
-  echo "To infinity and beyond"
-  sleep 2
+# code to print infinity code
+
+
+handle(){
+	echo "I am invincible!!!"
+}
+
+trap handle SIGTERM
+while true
+do
+	echo To infinity and beyond
+	sleep 2
 done
