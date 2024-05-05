@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Displays its own PID
+# This script to show shell pid
 echo $$
