@@ -3,8 +3,10 @@
 
 localhost_ip="127.0.0.2"
 facebook_ip="8.8.8.8"
+first_directory="/etc/hosts"
+second_directory="$HOME/hosts.new"
 
-cp /etc/hosts ~/hosts.new
-sed -i "/localhost/ s/.*/$localhost_ip localhost/" ~/etc/hosts.new
-echo -e "$facebook_ip\tfacebook.com" >> ~/etc/hosts.new
-cp -f ~/hosts.new /etc/hosts
+cp "$first_directory" "$second_directory"
+sed -i "s/^127\.0\.0\.1.*/$localhost_ip\tlocalhost/" "$second_directory"
+echo -e "$facebook_ip\tfacebook.com" >> "$second_directory"
+cp -f "$second_directory" "$first_directory"
