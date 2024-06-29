@@ -2,5 +2,4 @@
 package { 'Flask':
   ensure   => '2.1.0',   # Ensure version 2.1.0 is installed
   provider => 'pip3',    # Use pip3 provider for Python 3
-  require  => Package['python3-pip'],  # Ensure python3-pip is installed first
 }
