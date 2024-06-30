@@ -1,5 +1,5 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
+# A  Bash script that creates an RSA key pair.
 # Define the key name and passphrase
 KEY_NAME="school"
 PASSPHRASE="betty"
