@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Installs and configures Nginx to return "Hello World!"
+
+# Update package list and install Nginx
+apt-get update -y
+apt-get install -y nginx
+
+# Create HTML page
+echo "Hello World!" > /var/www/html/index.html
+
+# Restart Nginx using service command
+service nginx restart
